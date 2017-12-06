@@ -21,7 +21,8 @@
   - name: Show IP
     debug: var=webserverip
   - name: Add floating IP
-    msg: Add floating IP"{{ item.instance_name }}"
+    debug: var=webserverip
+      msg: Add floating IP"{{ item.instance_name }}"
     os_floating_ip:
       cloud: ospcloud
       state: present
