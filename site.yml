@@ -1,4 +1,5 @@
 ---
+
 - hosts: jumpbox
 #  become: yes
 #  roles:
@@ -6,6 +7,7 @@
 #     - osp-keypair
 #     - osp-securitygroup
 #     - osp-flavor
+  become: yes
   roles:
      - osp-instances
 
