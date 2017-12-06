@@ -1,13 +1,11 @@
 ---
 
 - hosts: jumpbox
-#  become: yes
-#  roles:
-#     - osp-network
-#     - osp-keypair
-#     - osp-securitygroup
-#     - osp-flavor
   become: yes
   roles:
+     - osp-network
+     - osp-keypair
+     - osp-securitygroup
+     - osp-flavor
      - osp-instances
-
+     - osp-facts

@@ -1,3 +1,4 @@
+---
 # tasks file for osp-keypair
   - name: Generate key files
     user:
