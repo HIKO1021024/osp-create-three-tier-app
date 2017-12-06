@@ -20,6 +20,7 @@
     with_items: "{{ item1 }}"
   - name: Show IP
     debug: var=webserverip
+    
   - name: Add floating IP
     os_floating_ip:
       cloud: ospcloud
@@ -31,4 +32,5 @@
       timeout: 180
     register: instancefloatingip
     with_items: "{{ item1 }}"
+  - name: Show IP
     debug: var=instancefloatingip.floating_ip.floating_ip_address
