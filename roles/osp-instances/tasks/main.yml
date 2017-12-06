@@ -33,6 +33,5 @@
     register: instancefloatingip
     with_items: "{{ item1 }}"
   - name: Show IP
-    debug: var=item.results.floating_ip
-    with_items: instancefloatingip
+    debug: var=instancefloatingip.results.floating_ip
 #    debug: var=instancefloatingip.floating_ip.floating_ip_address
