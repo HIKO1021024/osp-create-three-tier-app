@@ -20,7 +20,8 @@
     with_items: "{{ item1 }}"
   - name: Show IP
     debug: var=webserverip
-  - name: Add floating IP to "{{ item.instance_name }}"
+  - name: Add floating IP
+    msg: Add floating IP"{{ item.instance_name }}"
     os_floating_ip:
       cloud: ospcloud
       state: present
