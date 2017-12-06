@@ -1,0 +1,7 @@
+---
+
+items:
+  - { instance_name: app1, deployment: dev, group: apps, security_group_name: ICMP_and_SSH }
+  - { instance_name: app2, deployment: dev, group: apps, security_group_name: ICMP_and_SSH }
+  - { instance_name: db, deployment: dev, group: dbs, security_group_name: ICMP_and_SSH }
+  - { instance_name: frontend, deployment: dev, group: frontend, security_group_name: ICMP_and_SSH }
