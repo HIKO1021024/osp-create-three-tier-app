@@ -19,22 +19,22 @@
     register: webserverip
     with_items: "{{ item1 }}"
     debug: var=webserverip
-    - name: Add floating IP to "{{ item.instance_name }}"
-      os_floating_ip:
-        cloud: ospcloud
-        state: present
-        reuse: yes
-        server: "{{ item.instance_name }}"
-        network: ext_network
-        wait: true
-        timeout: 180
-      register: instancefloatingip
-    - name: Show "{{ instanceip }}" public IP
-      debug: var=instancefloatingip.floating_ip.floating_ip_address
-    - name: Wait for "{{ item.instance_name }}" to be available
-      wait_for:
-        host: "{{ instancefloatingip.floating_ip.floating_ip_address }}"
-        port: 22
-        search_regex: OpenSSH
-        timeout: 600
-      delegate_to: "{{ inventory_hostname }}"
+#    - name: Add floating IP to "{{ item.instance_name }}"
+#      os_floating_ip:
+#        cloud: ospcloud
+#        state: present
+#        reuse: yes
+#        server: "{{ item.instance_name }}"
+#        network: ext_network
+#        wait: true
+#        timeout: 180
+#      register: instancefloatingip
+#    - name: Show "{{ instanceip }}" public IP
+#      debug: var=instancefloatingip.floating_ip.floating_ip_address
+#    - name: Wait for "{{ item.instance_name }}" to be available
+#      wait_for:
+#        host: "{{ instancefloatingip.floating_ip.floating_ip_address }}"
+#        port: 22
+#        search_regex: OpenSSH
+#        timeout: 600
+#      delegate_to: "{{ inventory_hostname }}"
