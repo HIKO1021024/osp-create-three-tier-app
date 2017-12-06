@@ -1,7 +1,4 @@
 ---
-- hosts: jumpbox
-  gather_facts: false
-  tasks:
   - name: Create a server instance
     os_server:
       cloud: ospcloud
