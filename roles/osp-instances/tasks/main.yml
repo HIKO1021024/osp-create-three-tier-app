@@ -18,4 +18,5 @@
         cp /tmp/internal.repo /etc/yum.repos.d/internal.repo
     register: webserverip
     with_items: "{{ item1 }}"
+  - name: Show IP
     debug: var=webserverip
