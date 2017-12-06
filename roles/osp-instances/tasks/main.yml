@@ -1,8 +1,6 @@
 ---
 - hosts: jumpbox
   gather_facts: false
-#  vars:
-#    flavor_name: m1.small
   tasks:
   - name: Create a server instance
     os_server:
@@ -10,7 +8,7 @@
       name: "{{ item.instance_name }}"
       image: rhel-guest
       meta: "group={{ item.group }},deployment_name={{ item.deployment }}"
-#      flavor: "{{ flavor_name }}"
+      flavor: m2.small
       security_groups: "{{ item.security_group_name }}"
       key_name: ansible_ssh
       nics:
@@ -23,4 +21,7 @@
         cp /tmp/internal.repo /etc/yum.repos.d/internal.repo
     register: webserverip
     with_items:
-      - { instance_name: app1, deployment: dev, group: apps, security_group_name: app_servers }
+      - { instance_name: app1, deployment: dev, group: apps, security_group_name: ICMP_and_SSH }
+      - { instance_name: app2, deployment: dev, group: apps, security_group_name: ICMP_and_SSH }
+      - { instance_name: db, deployment: dev, group: dbs, security_group_name: ICMP_and_SSH }
+      - { instance_name: frontend, deployment: dev, group: frontend, security_group_name: ICMP_and_SSH }
