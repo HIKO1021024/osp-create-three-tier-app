@@ -1,6 +1,8 @@
 ---
 
 - hosts: jumpbox
+  vars_files:
+   - ./osp_create_param.yml
   become: yes
   roles:
      - osp-network
