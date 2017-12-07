@@ -31,11 +31,3 @@
       wait: true
       timeout: 180
     register: instancefloatingip
-    with_items: "{{ item1 }}"
-  - name: Show IP
-    debug: var=item.floating_ip.floating_ip_address
-    with_items: "{{ instancefloatingip.results }}"
-  - name: Show IP 2
-    debug: var=instancefloatingip
-    
-#    debug: var=instancefloatingip.floating_ip.floating_ip_address
