@@ -14,7 +14,7 @@
   - name: Create frontend instance
     include_role: 
        name: osp-facts
-       vars_from: ./osp_create_param.yml
+       vars: item
     with_items: "{{ item1 }}"
   - name: Gather facts
     include_role: 
