@@ -18,3 +18,5 @@
   - name: Gather facts
     include_role: 
        name: osp-facts
+    tags:
+     - test_inventory
