@@ -19,6 +19,7 @@
       - app2
       - db
       - frontend
+      - web1
 #      image: rhel-guest
 #      meta: "group={{ webserver_group }},deployment_name={{ deployment }}"
 #      flavor: "{{ flavor_name }}"
