@@ -12,6 +12,7 @@
   - name: Create frontend instance
     include_role: 
        name: osp-facts
+       vars_from: main.yml
     with_items: "{{ item1 }}"
   - name: Gather facts
     include_role: 
