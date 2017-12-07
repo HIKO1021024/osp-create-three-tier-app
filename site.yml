@@ -7,7 +7,7 @@
      - osp-keypair
      - osp-securitygroup
      - osp-flavor
-       tasks:
+  tasks:
 ##Create Fronend Instance
   - name: Create frontend instance
     include_role: 
