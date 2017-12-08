@@ -1,7 +1,7 @@
 ---
 
 item1:
-      - { os_name: "frontend1", group_name: "frontends", security_groups: "frontend_servers"} 
-      - { os_name: "app1"     , group_name: "apps"     , security_groups: "app_servers" } 
-      - { os_name: "app2"     , group_name: "apps"     , security_groups: "app_servers" } 
-      - { os_name: "appdb1"   , group_name: "appdbs"   , security_groups: "db_servers" } 
+      - { instance_name: frontend, deployment: dev, group: apps, security_group_name: frontend_servers }
+      - { instance_name: app1, deployment: dev, group: apps, security_group_name: app_servers }
+      - { instance_name: app2, deployment: dev, group: dbs, security_group_name: app_servers }
+      - { instance_name: appdb1, deployment: dev, group: frontend, security_group_name: db_servers }
