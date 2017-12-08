@@ -5,6 +5,7 @@
    - ./osp_create_param.yml
   become: yes
   roles:
+     - osp-flavor
      - osp-keypair
      - osp-securitygroup
      - osp-network

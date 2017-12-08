@@ -1,7 +1,7 @@
 ---
 
 item1:
-  - { instance_name: app1, deployment: dev, group: apps, security_group_name: app_servers }
-  - { instance_name: app2, deployment: dev, group: apps, security_group_name: app_servers }
-  - { instance_name: db, deployment: dev, group: dbs, security_group_name: db_servers }
-  - { instance_name: frontend, deployment: dev, group: frontend, security_group_name: frontend_servers }
+      - { os_name: "frontend1", group_name: "frontends", security_groups: [ "ssh", "http" ] } 
+      - { os_name: "app1"     , group_name: "apps"     , security_groups: [ "ssh", "tomcat-web" ] } 
+      - { os_name: "app2"     , group_name: "apps"     , security_groups: [ "ssh", "tomcat-web" ] } 
+      - { os_name: "appdb1"   , group_name: "appdbs"   , security_groups: [ "ssh", "postgres" ] } 

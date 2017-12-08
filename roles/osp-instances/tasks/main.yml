@@ -5,7 +5,7 @@
       name: "{{ item.instance_name }}"
       image: rhel-guest
       meta: "group={{ item.group }},deployment_name={{ item.deployment }}"
-      flavor: m1.small
+      flavor: m2.small
       security_groups: "{{ item.security_group_name }}"
       key_name: ansible_ssh
       nics:
