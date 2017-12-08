@@ -1,7 +1,8 @@
 ---
+
 - name: get osp facts
-  import_role:
-    name: osp-facts
+  roles:
+    - osp-facts
     
 - name: configuration
   hosts: all
