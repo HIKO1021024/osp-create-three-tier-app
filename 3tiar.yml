@@ -1,6 +1,7 @@
 ---
-
 - name: get osp facts
+  gather_facts: false
+  hosts: jumpbox
   roles:
     - osp-facts
     
