@@ -1,7 +1,7 @@
 ---
 
 item1:
-      - { os_name: "frontend1", group_name: "frontends", security_groups: [ "ssh", "http" ] } 
-      - { os_name: "app1"     , group_name: "apps"     , security_groups: [ "ssh", "tomcat-web" ] } 
-      - { os_name: "app2"     , group_name: "apps"     , security_groups: [ "ssh", "tomcat-web" ] } 
-      - { os_name: "appdb1"   , group_name: "appdbs"   , security_groups: [ "ssh", "postgres" ] } 
+      - { os_name: "frontend1", group_name: "frontends", security_groups: "frontend_servers"} 
+      - { os_name: "app1"     , group_name: "apps"     , security_groups: "app_servers" } 
+      - { os_name: "app2"     , group_name: "apps"     , security_groups: "app_servers" } 
+      - { os_name: "appdb1"   , group_name: "appdbs"   , security_groups: "db_servers" } 
