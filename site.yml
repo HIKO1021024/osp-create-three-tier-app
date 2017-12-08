@@ -5,12 +5,12 @@
    - ./osp_create_param.yml
   become: yes
   roles:
-     - osp-network
      - osp-keypair
      - osp-securitygroup
+     - osp-network
   tasks:
 ##Create Fronend Instance
-  - name: Create frontend instance
+  - name: Create  instance
     include_role: 
        name: osp-instances
     with_items: "{{ item1 }}"
